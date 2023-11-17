@@ -231,12 +231,13 @@ img {
 }
 
 .site-name {
-  margin-top: 10.5px;
+  margin-top: 16px;
   color: #333;
   cursor: pointer;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  font-size: 28px;
+  font-weight: bold;
+  font-size: 24px;
   letter-spacing: 1px;
 }
 
