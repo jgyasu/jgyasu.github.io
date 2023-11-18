@@ -75,6 +75,12 @@ body {
   padding: 0 10px;
   width: 100%;
 }
+@media screen and (max-width: 640px) {
+  .container {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

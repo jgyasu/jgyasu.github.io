@@ -28,7 +28,13 @@ body {
   max-width: 650px;
   padding: 0 10px;
   width: 100%;
+
+  @include mobile {
+    max-width: 340px;
+    margin: 0 auto;
+  }
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
@@ -269,6 +275,7 @@ nav {
   .read-more {
     font-size: 15px;
   }
+
 }
 
 .wrapper-footer {
@@ -277,6 +284,8 @@ nav {
   border-bottom: 1px solid #ddd;
   background-color: $lightGray;
 }
+
+
 
 
 
