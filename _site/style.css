@@ -77,7 +77,7 @@ body {
 }
 @media screen and (max-width: 640px) {
   .container {
-    max-width: 340px;
+    max-width: 360px;
     margin: 0 auto;
   }
 }
@@ -121,12 +121,12 @@ p {
 }
 
 a {
-  color: #4183C4;
+  color: #097969;
   text-decoration: none;
   cursor: pointer;
 }
 a:hover, a:active {
-  color: #4183C4;
+  color: #097969;
 }
 
 ul, ol {
@@ -238,7 +238,7 @@ img {
 
 .site-name {
   margin-top: 16px;
-  color: #333;
+  color: #097969;
   cursor: pointer;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -282,7 +282,7 @@ nav a {
 @media screen and (max-width: 640px) {
   nav a {
     margin: 0 10px;
-    color: #4183C4;
+    color: #097969;
   }
 }
 

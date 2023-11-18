@@ -75,11 +75,11 @@ p {
 }
 
 a {
-  color: $blue;
+  color: $cadGreen;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: $cadGreen;
   }
 }
 
@@ -198,7 +198,7 @@ img {
 
 .site-name {
   margin-top: 16px;
-  color: $darkGray;
+  color: $cadGreen;
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
@@ -239,7 +239,7 @@ nav {
 
     @include mobile {
       margin: 0 10px;
-      color: $blue;
+      color: $cadGreen;
     }
   }
 }
