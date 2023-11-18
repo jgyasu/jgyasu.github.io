@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hello, I am Jigyasu! And I am an undergrad at National Institute of Technology (NIT) Agartala, India majoring in [Electrical Engineering](https://en.wikipedia.org/wiki/Electrical_engineering) (Electronics and Instrumentation). 
+Hello, I am Jigyasu! And I am a freshman at [National Institute of Technology (NIT)](https://en.wikipedia.org/wiki/National_Institutes_of_Technology_(India)) Agartala, India majoring in [Electrical Engineering](https://en.wikipedia.org/wiki/Electrical_engineering) (Electronics and Instrumentation). 
 
 I remain confused most of the times and I don't know about a lot of things. 
 
