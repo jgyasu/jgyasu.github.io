@@ -19,7 +19,7 @@ html {
 
 body {
 	background: $white;
-  font: 16px/1.4 $helvetica;
+  font: 16px/1.4 $roboto;
   color: $darkGray;
 }
 
@@ -75,11 +75,11 @@ p {
 }
 
 a {
-  color: $cadGreen;
+  color: $red;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $cadGreen;
+    color: $red;
   }
 }
 
@@ -198,7 +198,7 @@ img {
 
 .site-name {
   margin-top: 16px;
-  color: $darkGray;
+  color: $red;
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
@@ -239,7 +239,7 @@ nav {
 
     @include mobile {
       margin: 0 10px;
-      color: $cadGreen;
+      color: $red;
     }
   }
 }
@@ -274,6 +274,12 @@ nav {
 
   .read-more {
     font-size: 15px;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 18px;
+    color: $darkerGray;
   }
 
 }

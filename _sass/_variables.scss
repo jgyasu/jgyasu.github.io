@@ -14,11 +14,16 @@ $gray: #666;
 $lightGray: #eee;
 $white: #fff;
 $cadGreen: #097969;
+$red: #bb053c;
 
 // Font stacks
 $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+$roboto: 'Roboto', sans-serif;
 
 // Mobile breakpoints
 @mixin mobile {
@@ -26,3 +31,4 @@ $georgia: Georgia, serif;
     @content;
   }
 }
+
