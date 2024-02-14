@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hello, world
+title: Hello, World!
 ---
 
-Hello! This is a post to test out the blog :)
+Hello, this is a post to test out the blog :)
