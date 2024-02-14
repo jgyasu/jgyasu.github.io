@@ -19,7 +19,7 @@ I love you for not being an alpha, sigma or chad and just being the guy you're. 
 
 I wanna bid adieu here but before I end this, I wanna highlight the opening line of Billy Joel's Vienna, "Slow down you crazy child". Slow down somewhere down the line and be gentle with yourself.
 
-With optimism and love,
+With optimism and love, <br>
 Your Current Self
 
 January 13th, 2024
