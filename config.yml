@@ -1,0 +1,134 @@
+baseURL: "https://jgyasu.github.io" 
+title: Jigyasu
+paginate: 20
+theme: PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+
+taxonomies:
+    tag: tags
+
+menu:
+    main:
+        # - name: Books
+        #   url: books/
+        #   weight: 5
+        - name: News
+          url: news/
+          weight: 5
+        - name: Papers
+          url: papers/
+          weight: 2
+        # - name: Courses
+        #   url: courses/
+        #   weight: 3
+        # - name: Data
+        #   url: data/
+        #   weight: 4 
+        - name: Blog
+          url: blog/
+          weight: 6
+
+params:
+    description: "Engineering undergrad at National Institute of Technology (NIT) Agartala, India"
+    author: Jigyasu
+    googleAnalyticsID: "G-RT0SZRLXJF"
+    DateFormat: "January 2006"
+    defaultTheme: light
+    hideFooter: false
+    disableThemeToggle: true
+    ShowShareButtons: false
+    ShowReadingTime: false
+    disableSpecial1stPost: true
+    disableAnchoredHeadings: true
+    ShowPostNavLinks: false
+    ShowBreadCrumbs: false
+    ShowCodeCopyButtons: true
+    ShowAllPagesInArchive: false
+    MainSections: ["books","courses","papers","data"]
+    ShowRssButtonInSectionTermList: false
+    ShowToc: false
+    disableScrollToTop: true
+    TocOpen: true
+    ShowWordCount: false
+    UseHugoToc: true
+    comments: false
+    math: true
+    profileMode:
+          enabled: true
+          title: Jigyasu
+          subtitle: "Hello! I'm Jigyasu, studying as an undergraduate at [National Institute of Technology (NIT) Agartala, India](https://en.wikipedia.org/wiki/National_Institutes_of_Technology_(India)). I am in my sophomore year working towards a degree in electronics and instrumentation engineering. My interests include human-computer interaction, new-media art, AI-generated media and related research. <br> <br> In my free time, I enjoy walking, reading fiction books, finding and listening to new music and sleeping. Feel free to reach out to me for any collaborations."
+          imageUrl: "picture.jpg"
+          imageWidth: 160
+          imageHeight: 160
+          imageTitle: Jigyasu
+          buttons:
+            # - name: CV
+            #   url: cv.pdf
+            # - name: Job-market paper
+            #   url: jmp.pdf
+            # - name: Papers
+            #   url: papers/
+            - name: News
+              url: news/
+            - name: Blog
+              url: blog/
+            # - name: Courses
+            #   url: courses/
+            # - name: Data
+            #   url: data/
+            # - name: Books
+            #   url: books/
+            # - name: Tags
+            #   url: tags/
+            # - name: Archive
+            #   url: archive/
+
+    socialIcons:
+        - name: CV
+          url: cv.pdf
+        - name: Email
+          url: mailto:jigyasu@outlook.in
+        - name: Linkedin
+          url: https://linkedin.com/in/jigyasu
+        # - name: Zoom
+        #   url: https://www.zoom.us/my/igelfeld
+        # - name: Location
+        #   url: location/
+        # - name: Office Hours
+        #   url: officehours/
+        # - name: Google Scholar
+        #   url: https://scholar.google.com/citations?user=cL23w-4AAAAJ
+        - name: GitHub
+          url: https://github.com/jgyasu
+        # - name: Substack
+        #   url: https://pmichaillat.substack.com
+        # - name: YouTube
+        #   url: https://www.youtube.com/@alexandermccallsmithoffici9000
+        # - name: Twitter
+        #   url: https://twitter.com/McCallSmith
+        - name: Goodreads
+          url: https://goodreads.com/jgyasu
+
+    assets:
+        disableScrollBarStyle: true
+    cover:
+        hiddenInList: false
+        hiddenInSingle: true
+    label:
+      text: "Jigyasu"
+      icon: favicon.ico
+      iconHeight: 18
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        guessSyntax: true
+        style: autumn 
+    tableOfContents:
+        endLevel: 2
+        ordered: false
+        startLevel: 2
