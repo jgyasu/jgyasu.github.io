@@ -17,9 +17,9 @@ menu:
         - name: News
           url: news/
           weight: 5
-        - name: Papers
-          url: papers/
-          weight: 2
+        # - name: Papers
+        #   url: papers/
+        #   weight: 2
         # - name: Courses
         #   url: courses/
         #   weight: 3
@@ -59,7 +59,7 @@ params:
           enabled: true
           title: Jigyasu
           subtitle: "Hello! I'm Jigyasu, studying as an undergraduate at [National Institute of Technology (NIT) Agartala, India](https://en.wikipedia.org/wiki/National_Institutes_of_Technology_(India)). I am in my sophomore year working towards a degree in electronics and instrumentation engineering. My interests include human-computer interaction, new-media art, AI-generated media and related research. <br> <br> In my free time, I enjoy walking, reading fiction books, finding and listening to new music and sleeping. Feel free to reach out to me for any collaborations."
-          imageUrl: "picture.jpg"
+          imageUrl: "picture.jpeg"
           imageWidth: 160
           imageHeight: 160
           imageTitle: Jigyasu
