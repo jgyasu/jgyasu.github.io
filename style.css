@@ -1,5 +1,5 @@
 body {
-    height: 80vh;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,4 +31,16 @@ body {
   p {
     font-size: 16px;
   }
+
+  a {
+    color: #E01442;
+    text-decoration: none;
+  }
+
+  .notes {
+    font-size: 14px;
+    color: #666;
+    margin-top: 20px;
+  }
+
   
