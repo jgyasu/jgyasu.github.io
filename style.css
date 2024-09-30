@@ -1,5 +1,5 @@
 body {
-    height: 30vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,8 +8,28 @@ body {
     font-family: Arial, sans-serif;
     padding: 20px;
   }
+
+  h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+
+  a {
+    color: #33006F;
+    text-decoration: none;
+  }
   
   .container {
+    /* border: 1px solid #ccc; */
     max-width: 600px;
     width: 100%; 
   }
@@ -22,25 +42,17 @@ body {
   .content {
     text-align: left;
   }
-  
-  h1 {
-    font-size: 36px;
-    margin: 0;
-  }
-  
-  p {
-    font-size: 16px;
-  }
-
-  a {
-    color: #452c63;
-    text-decoration: none;
-  }
 
   .notes {
     font-size: 14px;
     color: #666;
     margin-top: 20px;
+  }
+
+  .news-item {
+    /* border: 1px solid #ccc; */
+    margin-left: 20px;
+    margin-right: 40px;
   }
 
   
