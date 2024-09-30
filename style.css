@@ -1,5 +1,5 @@
 body {
-    height: 90vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,7 +24,7 @@ body {
   }
 
   a {
-    color: #DB0042;
+    color: #720e9e;
     text-decoration: none;
   }
   
