@@ -1,58 +1,95 @@
+/* Body styling */
 body {
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-  }
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
 
-  h1 {
-    font-size: 24px;
-    margin: 0;
-  }
+/* Heading and paragraph styling */
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
 
-  h2 {
-    font-size: 20px;
-    margin: 0;
-  }
-  
-  p {
-    font-size: 16px;
-  }
+h2 {
+  font-size: 20px;
+  margin: 0;
+}
 
-  a {
-    color: #0039a6;
-    text-decoration: none;
-  }
-  
-  .container {
-    /* border: 1px solid #ccc; */
-    max-width: 600px;
-    width: 100%; 
-  }
-  
-  .title {
-    text-align: left; 
-    margin-bottom: 20px; 
-  }
-  
-  .content {
-    text-align: left;
-  }
+p {
+  font-size: 16px;
+}
 
-  .notes {
-    font-size: 14px;
-    color: #666;
-    margin-top: 20px;
-  }
+a {
+  color: #0039a6;
+  text-decoration: none;
+}
 
-  .items {
-    /* border: 1px solid #ccc; */
-    margin-left: 20px;
-    margin-right: 40px;
-  }
+/* Container styling */
+.container {
+  max-width: 600px;
+  width: 100%; 
+}
 
-  
+/* Title section */
+.title {
+  text-align: left; 
+  margin-bottom: 20px; 
+}
+
+/* Content section */
+.content {
+  text-align: left;
+}
+
+/* Space between sections */
+.timeline {
+  margin-bottom: 20px;
+}
+
+.projects {
+  margin-top: 20px;
+}
+
+.projects h2 {
+  margin-bottom: 15px; /* Adds space between the "pet projects" title and the first project item */
+}
+
+/* Notes section */
+.notes {
+  font-size: 14px;
+  color: #666;
+  margin-top: 20px;
+}
+
+/* Items layout */
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* News and project item layout */
+.timeline-item, .project-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Ensure text wraps properly */
+.timeline-item p, .project-item p {
+  margin: 0;
+  flex: 1;
+}
