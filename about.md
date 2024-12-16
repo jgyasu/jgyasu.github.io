@@ -14,3 +14,4 @@ I am currently collaborating with [Dr. Amitava Das](https://scholar.google.com/c
 **Relevant Links**  
 Email: [{{ site.author.email }}](mailto:{{ site.author.email }})  
 GitHub: [github.com/{{ site.author.github }}](https://github.com/{{ site.author.github }})  
+LinkedIn: [linkedin.com/in/jgyasu](https://linkedin.com/in/jgyasu)
