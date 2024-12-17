@@ -6,7 +6,7 @@ categories: jekyll update
 usemathjax: true
 ---
 
-Ever since I learned about a website, I have wanted to have one for myself. I have seen some people get so passionate about their websites and build it as it is their home, and maybe they aren't wrong either, websites are internet homes, aren't they? So, I honestly understand them.
+Ever since I learned what is a website, I have wanted to have one for myself. I have seen some people get really passionate about their websites and build it as if it is their home, and maybe they aren't wrong either, websites are internet homes, aren't they? So, I honestly understand them.
 
 I am guilty of changing an awful lot of internet homes before finally landing upon this one, the one where you're reading this post. I don't know for how long I will stick to this home but I hope I do! I like the clean design, thanks to the [Klisé](https://github.com/piharpi/jekyll-klise) theme that I recently found. 
 
