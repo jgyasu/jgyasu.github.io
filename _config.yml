@@ -1,7 +1,7 @@
 # Site settings
 title: Jigyasu # site title
 description: >- # site description
-  engineering undergrad, interested in artificial intelligence, computer graphics and human-computer interaction
+  engineering undergrad, interested in artificial intelligent systems
 lang: en-US # default lang
 timezone: Asia/Kolkata # set your timezone
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
@@ -12,9 +12,7 @@ mode: dark # default theme "dark" | "light"
 author:
   name: Jigyasu # author name
   bio: >- # tell to the world
-    Engineering Undergrad <a href="https://en.wikipedia.org/wiki/National_Institutes_of_Technology_(India)" target="_blank" rel="noopener">@NIT-A</a> | Research Intern <a href="https://sc.edu/study/colleges_schools/engineering_and_computing/research/research_centers_and_institutes/artificial_intelligence_institute/index.php" target="_blank" rel="noopener">@AIISC</a>
-    <br>
-    <a href="https://jgyasu.github.io/about">read more</a>
+    engineering undergrad, interested in artificial intelligent systems
   username: username # general username
   github: jgyasu # github username
   twitter: twitter_username # twitter username
