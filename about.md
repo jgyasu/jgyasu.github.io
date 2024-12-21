@@ -14,5 +14,5 @@ Currently, I am collaborating with [Dr. Amitava Das](https://scholar.google.com/
 **Relevant Links**  
 Email: [{{ site.author.email }}](mailto:{{ site.author.email }})  
 GitHub: [github.com/{{ site.author.github }}](https://github.com/{{ site.author.github }})  
-LinkedIn: [linkedin.com/in/jgyasu](https://linkedin.com/in/jgyasu)
+LinkedIn: [linkedin.com/in/jgyasu](https://linkedin.com/in/jgyasu) <br>
 Resume: [jgyasu.github.io/jigyasu_resume.pdf](jgyasu.github.io/jigyasu_resume.pdf)
