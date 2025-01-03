@@ -15,6 +15,7 @@ Disclaimer: My posts are non-exhaustive so I will keep updating them.
 
 <figure>
 <img src="/how-to-shell/shell_hello.png" alt="hello from the terminal">
+<figcaption>hello from the terminal</figcaption>
 </figure>
 
 ### Basic Commands
@@ -192,6 +193,7 @@ There is a special directory called `/sys` which has a bunch of special programs
 
 <figure>
 <img src="/how-to-shell/shell_sys.png" alt="the configurables inside the sys directory">
+<figcaption>the configurables inside the sys directory</figcaption>
 </figure>
 
 For example, if your computer has backlight, you can play with it and change the brightness from your terminal:
