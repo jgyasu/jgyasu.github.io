@@ -1,7 +1,7 @@
 ---
 title: How to Shell?
-date: 2020-01-25 11:58:47 +07:00
-# modified: 2020-02-02 16:49:47 +07:00
+date: 2025-01-03 11:58:47 +05:30
+# modified: 
 tags: [shell, bash, terminal, cli, unix/linux]
 description: Essential Linux terminal commands. This blog and guide covers navigation, file management, redirection, superuser privileges, and bash scripting.
 image: "/how-to-shell/shell_hello.png"
@@ -15,6 +15,7 @@ Disclaimer: My posts are non-exhaustive so I will keep updating them.
 
 <figure>
 <img src="/how-to-shell/shell_hello.png" alt="hello from the terminal">
+<figcaption>hello from the terminal</figcaption>
 </figure>
 
 ### Basic Commands
@@ -192,6 +193,7 @@ There is a special directory called `/sys` which has a bunch of special programs
 
 <figure>
 <img src="/how-to-shell/shell_sys.png" alt="the configurables inside the sys directory">
+<figcaption>the configurables inside the sys directory</figcaption>
 </figure>
 
 For example, if your computer has backlight, you can play with it and change the brightness from your terminal:
