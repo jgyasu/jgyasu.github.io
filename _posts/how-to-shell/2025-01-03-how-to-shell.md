@@ -192,7 +192,7 @@ $ sudo su
 There is a special directory called `/sys` which has a bunch of special programs or knobs of sorts which lets you play with the configuration of the system and it requires a superuser permission. It's a whole different magical world inside the `/sys` directory but do proper research before messing with anything inside it because it directly effects your system's kernel. 
 
 <figure>
-<img src="/how-to-shell/shell_sys.png" alt="the configurables inside the sys directory">
+<img src="./shell_sys.png" alt="the configurables inside the sys directory">
 </figure>
 
 For example, if your computer has backlight, you can play with it and change the brightness from your terminal:
