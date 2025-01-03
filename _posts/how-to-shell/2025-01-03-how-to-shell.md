@@ -135,7 +135,9 @@ $  man  ls
 By default, the input and output stream in a shell is wired to the terminal screen but they can be rewired:
 
 **>**: Rewires the output to a file (overwrites).
+
 **>>**: Appends output to a file.
+
 **<**: Rewires the input from a file.
 
 Examples:
