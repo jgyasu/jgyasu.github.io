@@ -21,13 +21,13 @@ Disclaimer: My posts are non-exhaustive so I will keep updating them.
 
 These are some of the basic commands that can be combined with other commands to automate tasks.
 
-**date**: Displays the current date and time.
+`date`: Displays the current date and time.
 
 ```bash
 $  date
 ```
 
-**echo**: Prints the provided argument to the terminal.
+`echo`: Prints the provided argument to the terminal.
 
 ```bash
 $  echo  Hello
@@ -62,13 +62,13 @@ Windows, on the other hand, uses multiple roots, e.g., `C:\`, `D:\` etc. and the
 
 Commands to navigate paths:
 
- **pwd**: Prints the current working directory.
+`pwd` Prints the current working directory.
 
 ```bash
 $ pwd
 ```
 
- **cd**: Changes directories.
+`cd`: Changes directories.
  
 ```bash
 $ cd /Directory # Changes the location to Directory
@@ -78,7 +78,7 @@ $ cd - # Switches between the current and previous directory
 ```
 ### Listing Files and Directories
 
-**ls**: Lists files in the current directory.
+`ls`: Lists files in the current directory.
 
 ```bash
 $ ls
@@ -86,32 +86,32 @@ $ ls -l # Detailed view
 ```
 ### Managing Files and Directories
 
-**mv**: Renames or moves files and directories.
+`mv`: Renames or moves files and directories.
 
 ```bash
 $ mv old.txt new.txt 
 ```
 
-**cp**: Copies files and directories.
+`cp`: Copies files and directories.
 
 ```bash
 $ cp file.txt copy.txt # Creates a copy of file.txt
 ```
 
-**rm**: Deletes files.
+`rm`: Deletes files.
 
 ```bash
 $ rm file.txt
 $ rm -r directory # Deletes directories recursively
 ```
 
-**rmdir**: Removes empty directories.
+`rmdir`: Removes empty directories.
 
 ```bash
 $ rmdir empty_directory
 ```
 
-**mkdir**: Creates directories.
+`mkdir`: Creates directories.
 
 ```bash
 $ mkdir new_directory
@@ -134,11 +134,11 @@ $  man  ls
 
 By default, the input and output stream in a shell is wired to the terminal screen but they can be rewired:
 
-**>**: Rewires the output to a file (overwrites).
+`>`: Rewires the output to a file (overwrites).
 
-**>>**: Appends output to a file.
+`>>`: Appends output to a file.
 
-**<**: Rewires the input from a file.
+`<`: Rewires the input from a file.
 
 Examples:
 
@@ -147,7 +147,7 @@ $  echo  "Hello"  >  file.txt # Rewires the output of echo from the terminal to 
 $  cat  <  file.txt  >  file_copy.txt # Rewires the content of file.txt as 
 ```
 
-Piping is a process that takes the output of the program in left and gives it as the input to the program in the right.
+Piping `|` is a process that takes the output of the program in left and gives it as the input to the program in the right.
 
 Example:
 
@@ -159,13 +159,13 @@ $  ls  -l  |  grep  .txt # Ouput of ls -l is given as the input to grep
 
 ### Viewing and Manipulating File Content
 
-**cat**: Prints file content.
+`cat`: Prints file content.
 
 ```bash
 $ cat file.txt
 ```
 
-**tail**: Displays the last lines of a file.
+`tail`: Displays the last lines of a file.
 
 ```bash
 $ tail -n2 file.txt # Prints last 2 lines of file.txt
@@ -175,13 +175,13 @@ $ tail -n2 file.txt # Prints last 2 lines of file.txt
 
 Root User: It is the administrator on the system and has user id = 0, it can practically do anything that it wants on the system, and it's also called the superuser. 
 
-**sudo**: (_Do as the SuperUser_) Temporarily runs a command with root privileges.
+`sudo`: (_Do as the SuperUser_) Temporarily runs a command with root privileges.
 
 ```bash
 $ sudo command # Runs the command as an administrator
 ```
 
-**sudo su**: Switches the entire shell to root mode.
+`sudo su`: Switches the entire shell to root mode.
 
 ```bash
 $ sudo su
@@ -207,12 +207,12 @@ You can configure a whole lot of stuff, even the LEDs present on your computer. 
 
 ### Miscellaneous Commands
 
-**xdg-open**: Opens a file with its default application.
+`xdg-open`: Opens a file with its default application.
 
 ```bash
 $ xdg-open index.html # Opens the HTML file with the default application, works on Linux
 ```
 
-**Ctrl+L**: Clears the terminal.
+`Ctrl+L`: Clears the terminal.
 
 These commands are almost enough now to operate everything on your computer just using your terminal. I will update on the Bash scripting soon :)
