@@ -1,6 +1,6 @@
 ---
 title: How to Shell?
-date: 2020-01-25 11:58:47 +07:00
+date: 2025-01-03 11:58:47 +05:30
 # modified: 2020-02-02 16:49:47 +07:00
 tags: [shell, bash, terminal, cli, unix/linux]
 description: Essential Linux terminal commands. This blog and guide covers navigation, file management, redirection, superuser privileges, and bash scripting.
@@ -14,8 +14,7 @@ So, I decided to change my dependence on StackOverflow and LLMs and learn the wo
 Disclaimer: My posts are non-exhaustive so I will keep updating them.
 
 <figure>
-<img src="/how-to-shell/shell_hello.png" alt="hello from the terminal">
-<figcaption>hello from the terminal</figcaption>
+<img src="https://i.ibb.co/3hxvnPQ/shell-hello.png" alt="hello from the terminal">
 </figure>
 
 ### Basic Commands
@@ -155,6 +154,7 @@ $  ls  -l  |  grep  .txt # Ouput of ls -l is given as the input to grep
 ```
 
 > `grep` is a program that searches for strings matching a regular expression given as the argument, I will talk more about them later.
+
 ### Viewing and Manipulating File Content
 
 **cat**: Prints file content.
@@ -193,7 +193,6 @@ There is a special directory called `/sys` which has a bunch of special programs
 
 <figure>
 <img src="/how-to-shell/shell_sys.png" alt="the configurables inside the sys directory">
-<figcaption>the configurables inside the sys directory</figcaption>
 </figure>
 
 For example, if your computer has backlight, you can play with it and change the brightness from your terminal:
