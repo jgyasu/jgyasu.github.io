@@ -58,6 +58,7 @@ Windows, on the other hand, uses multiple roots, e.g., `C:\`, `D:\` etc. and the
 ### Paths: Absolute and Relative
 
 **Absolute Path**: Complete path to a file or directory, starting from the root.
+
 **Relative Path**: Path relative to the current directory.
 
 Commands to navigate paths:
