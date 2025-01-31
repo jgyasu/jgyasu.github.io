@@ -11,4 +11,4 @@ I'm Jigyasu, an engineering undergraduate at [NIT Agartala](https://en.wikipedia
 
 I also contribute actively to [Sktime](https://www.sktime.net/), a machine learning framework for time-series forecasting and I was selected as a mentee and a member of the organization.
 
-Feel free to e-mail me at _jigyasu[at]outlook[dot]in_
+Feel free to mail me at jigyasu[at]outlook[dot]in
