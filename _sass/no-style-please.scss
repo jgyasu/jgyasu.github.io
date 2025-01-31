@@ -24,8 +24,8 @@ hr { margin: 2rem 0; }
 p { margin: 1rem 0; }
 
 a {
-  text-decoration: none;
-  color: #DB0042;
+  text-decoration: none; !important
+  color: #DB0042; !important
 }
 
 li { margin: 0.4rem 0; }
