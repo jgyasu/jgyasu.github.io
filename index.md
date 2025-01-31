@@ -5,4 +5,6 @@ title: Jigyasu
 
 # Jigyasu
 
-Engineering Undergraduate @[NIT Agartala](https://en.wikipedia.org/wiki/National_Institutes_of_Technology_(India)), Research Intern @[AIISC](https://research.cec.sc.edu/aii/), Contributor and Mentee @[Sktime](https://www.sktime.net/)
+I'm Jigyasu, an engineering Undergraduate at [NIT Agartala](https://en.wikipedia.org/wiki/National_Institutes_of_Technology_(India)). I am currently collaborating with the team at [AIISC](https://research.cec.sc.edu/aii/) as a research intern where we're researching watermarking methods for AI-generated content.
+
+I also contribute actively to [Sktime](https://www.sktime.net/), a machine learning framework for time-series forecasting and I was selected as a mentee and member of the organization.
