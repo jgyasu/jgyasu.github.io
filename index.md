@@ -11,7 +11,7 @@ I'm Jigyasu, an engineering undergraduate at [NIT Agartala](https://en.wikipedia
 
 I also like OSS and I contribute actively to [sktime](https://github.com/sktime/sktime), a framework for machine learning with time-series.
 
-Feel free to mail me at jigyasu[at]outlook[dot]in
+Feel free to mail me at [jigyasu@outlook.in](mailto:jigyasu@outlook.in)
 
 ## Posts
 
