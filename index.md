@@ -3,7 +3,7 @@ layout: default
 title: Jigyasu
 ---
 
-#### [Home](/) | [About](/about) | [Blogs](/archive)
+#### [Home](/)  |  [About](/about)  |  [Blogs](/archive)
 
 # Jigyasu
 
