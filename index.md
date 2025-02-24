@@ -15,3 +15,6 @@ I can be contacted at _firstname[at]outlook[dot]in_.
 
 ## Posts
 
+{% for post in site.posts %}
+  * [{{ post.title }}]({{ post.url }})
+{% endfor %}
