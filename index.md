@@ -11,10 +11,10 @@ I'm Jigyasu, an engineering undergraduate at [NIT Agartala](https://en.wikipedia
 
 I also like OSS and I contribute actively to [sktime](https://github.com/sktime/sktime), a framework for machine learning with time-series.
 
-I can be contacted at _firstname[at]outlook[dot]in_.
+I can be contacted at _firstname_[at]outlook[dot]in.
 
 ## Posts
 
 {% for post in site.posts limit:5 %}
-  [{{ post.title }}]({{ post.url }}) - {{ post.date | date: "%B %d, %Y" }}
+  {{ post.date | date: "%B %d, %Y" }} - [{{ post.title }}]({{ post.url }})
 {% endfor %}
