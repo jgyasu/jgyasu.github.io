@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: perpetually curious, loves open-source
+subtitle: perpetually curious, love open-source
 
 profile:
   align: right
