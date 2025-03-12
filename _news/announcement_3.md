@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Joined [AIISC](https://www.aiisc.ai) as a Research Intern supervised by Dr. Amitava Das
+Joined [AIISC](https://aiisc.ai) as a Research Intern supervised by Dr. Amitava Das
