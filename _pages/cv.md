@@ -1,9 +1,7 @@
 ---
 layout: page
 title: CV
-permalink: /assets/cv1.pdf
+permalink: /assets/jigyasu_resume.pdf
 order: 5
 exclude: false
 ---
-
-[CV]({{ site.url }}/assets/cv1.pdf)
