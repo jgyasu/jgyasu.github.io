@@ -1,6 +1,7 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
+    background-color: #f9f9f7;
     color: #333;
     max-width: 800px;
     margin: 0 auto;
@@ -115,17 +116,19 @@ p {
 }
 
 .blog-item {
-    margin-bottom: 5px;
     display: flex;
+    align-items: baseline; /* align to text baseline instead of center */
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 .blog-date {
     font-weight: normal;
     color: #666;
-    margin-right: 10px;
     min-width: 100px;
-    display: inline-block;
+    display: inline-block; /* Optional, you can drop this too */
 }
+
 
 .contact-info {
     margin-top: 20px;
@@ -134,6 +137,13 @@ p {
 .blog-title {
     font-size: 1rem;
     margin-bottom: 5px;
+}
+
+.blog-date,
+.blog-title a {
+    font-size: 1rem;
+    line-height: 1.4;
+    display: inline-block; /* Ensures baseline behavior is respected */
 }
 
 .blog-post {
