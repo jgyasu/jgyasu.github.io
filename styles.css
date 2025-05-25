@@ -116,60 +116,26 @@ p {
 }
 
 .blog-item {
-    display: flex;
-    align-items: baseline; /* align to text baseline instead of center */
-    gap: 10px;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
 }
 
 .blog-date {
-    font-weight: normal;
-    color: #666;
-    min-width: 100px;
-    display: inline-block; /* Optional, you can drop this too */
+  font-size: 0.9rem;
+  color: #666;
 }
 
+.blog-title a {
+  font-size: 1rem;
+  color: #e91e63;
+  line-height: 1.3;
+  text-decoration: none;
+}
 
 .contact-info {
     margin-top: 20px;
-}
-
-.blog-title {
-    font-size: 1rem;
-    margin-bottom: 5px;
-}
-
-.blog-date,
-.blog-title a {
-    font-size: 1rem;
-    line-height: 1.4;
-    display: inline-block; /* Ensures baseline behavior is respected */
-}
-
-.blog-post {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.blog-header {
-    margin-bottom: 30px;
-}
-
-.blog-post .blog-title {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.blog-post .blog-date {
-    color: #666;
-    margin-bottom: 20px;
-    display: block;
-}
-
-.blog-content h2 {
-    margin-top: 30px;
-    font-size: 1.5rem;
 }
 
 .back-link {
