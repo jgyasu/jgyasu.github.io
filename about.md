@@ -14,7 +14,7 @@ My programming journey began in middle school, when we were taught [Logo](https:
 
 Beyond work and academics, I enjoy long walks, chess, music, watches, and books (except self-helps) — in no particular order.
 
-_Fun Fact: I am [mononymous](https://en.wikipedia.org/wiki/Mononym) legally, Krishnan is my preferred last name on the internet._
+Fun Fact: I am [mononymous](https://en.wikipedia.org/wiki/Mononym) legally, Krishnan is my preferred last name on the internet.
 
 
 ### Contact me
