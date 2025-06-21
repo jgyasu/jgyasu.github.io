@@ -19,5 +19,5 @@ Fun Fact: I am [mononymous](https://en.wikipedia.org/wiki/Mononym) legally, Kris
 
 ### Contact me
 
-* jigyasu [at] outlook [dot] in
+* _first name_ [at] outlook [dot] in
 * [fosstodon.org/@jigyasu](https://fosstodon.org/@jigyasu)
