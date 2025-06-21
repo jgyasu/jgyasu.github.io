@@ -15,7 +15,7 @@ This blog post is my attempt to answer all those questions.
 
 TL;DR: find the organsations from ESoC's [website](https://www.esoc.dev/) and GitHub [repo](https://github.com/european-summer-of-code) > read the application process > join the communities > make meaningful contributions > wait for the results
 
-## **How does ESoC work?**
+### How does ESoC work?
 
 Unlike how GSoC is coordinated and controlled by Google, ESoC is a Europe-based initiative supported by several key "hubs". Currently, there are three hubs (the numbers might increase in the future):
 
@@ -27,7 +27,7 @@ Unlike how GSoC is coordinated and controlled by Google, ESoC is a Europe-based 
 
 These hubs coordinate the projects registered with them and are responsible for all the administrative tasks. 
 
-## **Projects in ESoC**
+### Projects in ESoC
 
 There are broadly two kinds of available projects in ESoC: 
 
@@ -38,7 +38,7 @@ These projects are announced on a rolling basis unlike GSoC where the projects a
 
 (Disclaimer: Project types and the rules tied to them are quite flexible so it is best to confirm the technical and legal details with the concerned hub)
 
-## **Application and Selection Process**
+### Application and Selection Process
 
 The application and selection process might differ depending on the hub and type of project, so it’s best to keep up with the ESoC GitHub repository and website and seek help or instructions from the respective communities.
 
@@ -48,7 +48,7 @@ In the case of applied projects, you first submit the application form, and then
 
 In both cases, the interview will last for 30 minutes and you'll be required to give a 5-minute presentation on the code you’ve written. The interview questions will vary depending on the project you’re applying to. For open-source projects, the interview tends to focus more on open-source fundamentals, as your technical potential is already assessed by the mentors based on your past contributions to the project. However, for applied projects, expect in-depth technical questions on the topics associated with the project.
 
-## **General Tips**
+### General Tips
 
 A lot of people ask questions like, "How do I get selected for ESoC or GSoC or _insert any other open-source stipend-awarding program_?"
 
@@ -73,7 +73,7 @@ And how do you make valuable contributions?
 * Join the communication server
     * Whether it's Discord, Discourse, Zulip, Slack, or something else - join it! Get comfortable in the community, participate in discussions, and try to attend meetings if your project has them. That’s how you get to know the community and the project goals.
 
-## My Journey
+### My Journey
 
 It was September of 2024, and I wanted to start contributing to open-source projects because I had a clear idea of how much I could learn by working on a large codebase used by thousands of people.
 
@@ -85,4 +85,4 @@ By that time, I already had enough experience contributing to sktime and had gro
 
 To anyone getting started - happy contributing :)
 
-> I originally published this post [here](https://hackmd.io/@jigyasu/but-what-is-european-summer-of-code)
+_I originally published this post [here](https://hackmd.io/@jigyasu/but-what-is-european-summer-of-code)._
