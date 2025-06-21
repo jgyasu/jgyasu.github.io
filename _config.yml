@@ -3,13 +3,13 @@
 #
 
 # Name of your site (displayed in the header)
-name: SystemDotRun
+name: Jigyasu Krishnan
 
 # Short bio or description (displayed in the header)
-description: Dorian Cussen's Super Blog 
+description:
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://avatars3.githubusercontent.com/u/1244430?v=3&s=460
+avatar: https://avatars.githubusercontent.com/u/94278611?v=4
 
 #
 # Flags below are optional
@@ -21,25 +21,25 @@ footer-links:
   email:
   facebook:
   flickr:
-  github: doridori
-  instagram:
-  linkedin: doriancussen
+  github: jgyasu
+  instagram: cheesemaafia
+  linkedin: jgyasu
   pinterest:
   rss: true # just type anything here for a working RSS icon, make sure you set the "url" above!
-  twitter: doriancussen
-  stackoverflow: users/236743/dori # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  twitter:
+  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
-disqus: systemdotrun
+disqus:
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics: UA-61146917-1
+google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: http://doridori.github.io/
+url: http://jgyasu.github.io/
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
