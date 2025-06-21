@@ -15,4 +15,4 @@ Outside of work, I enjoy watches, chess, music, long walks, books (except self-h
 ### Contact me
 
 * jigyasu [at] outlook [dot] in
-* [https://fosstodon.org/@jigyasu](https://fosstodon.org/@jigyasu)
+* [fosstodon.org/@jigyasu](https://fosstodon.org/@jigyasu)

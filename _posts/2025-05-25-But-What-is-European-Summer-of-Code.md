@@ -3,8 +3,6 @@ layout: post
 title: "But What is European Summer of Code?"
 ---
 
-> I originally published this post [here](https://hackmd.io/@jigyasu/but-what-is-european-summer-of-code)
-
 If you're reading this, you probably already have an idea of how rewarding it is to contribute to impactful open-source projects. There are several programs like GSoC, LFX Mentorship, SoB, and etcetera, which provides new contributors with opportunities to work on exciting open-source projects and learn a lot all while getting a good stipend.
 
 ESoC or the European Summer of Code is one such relatively new program, the description from their website reads,
@@ -86,3 +84,5 @@ sktime had previously been accepted into GSoC twice, so I was also planning to a
 By that time, I already had enough experience contributing to sktime and had grown to love the community, so I dropped my plans to apply to GSoC with other organizations and withdrew my application. Looking back, I think it was a great decision and it made me so happy when I got the acceptence email for the ESoC program!
 
 To anyone getting started - happy contributing :)
+
+> I originally published this post [here](https://hackmd.io/@jigyasu/but-what-is-european-summer-of-code)
