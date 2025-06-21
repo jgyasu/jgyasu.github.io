@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am an engineering undergraduate student at the National Institute of Technology Agartala, India, with a interest in intelligent systems.
+I am an engineering undergraduate student at the National Institute of Technology Agartala, India, with an interest in intelligent systems.
 
 During my time as a research intern at [AIISC](https://aiisc.ai), I worked on creating a watermarking model for LLM-generated content and learnt how fragile it is to actually identify AI-generated text by automated systems.
 
@@ -14,5 +14,5 @@ Outside of work, I enjoy watches, chess, music, long walks, books (except self-h
 
 ### Contact me
 
-jigyasu [at] outlook [dot] in
-[@jigyasu@fosstodon.org](https://fosstodon.org/@jigyasu)
+* jigyasu [at] outlook [dot] in
+* [@jigyasu@fosstodon.org](https://fosstodon.org/@jigyasu)
