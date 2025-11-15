@@ -2,32 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Jigyasu</title>
-    <link>https://jgyasu.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Home on Jigyasu</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>Copyright © 2025, Jigyasu.</copyright>
-    <lastBuildDate>Sun, 25 May 2025 08:34:28 +0530</lastBuildDate>
-    <atom:link href="https://jgyasu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Nov 2025 18:34:28 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Contact</title>
-      <link>https://jgyasu.github.io/contact/</link>
+      <link>http://localhost:1313/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jgyasu.github.io/contact/</guid>
+      <guid>http://localhost:1313/contact/</guid>
       <description>&lt;p&gt;I can be reached out at &lt;em&gt;jigyasu&lt;/em&gt; [at] &lt;em&gt;outlook.in&lt;/em&gt; or &lt;em&gt;jigyasu&lt;/em&gt; [at] &lt;em&gt;sktime.net&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Some of my relevant accounts on the web:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/jgyasu/&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/in/jgyasu/&#34;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Now</title>
-      <link>https://jgyasu.github.io/now/</link>
+      <link>http://localhost:1313/now/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jgyasu.github.io/now/</guid>
-      <description>&lt;p&gt;What is a &lt;em&gt;now&lt;/em&gt; page? Read more about them &lt;a href=&#34;https://nownownow.com/about&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Update: November 15, 2025&lt;/p&gt;&#xA;&lt;p&gt;These days I have been working on the benchmarking infrastructure of sktime. We want it to reach a maturity stage where any one can easily reproduce an existing benchmarking experiment and I believe we&amp;rsquo;re quite close to our goal. This is in continuity to my project from European Summer of Code.&lt;/p&gt;&#xA;&lt;p&gt;I am also getting interested in the use of machine learning in biology and particulary AI&amp;rsquo;s application in drug discovery. I reached out to a professor to let me work with her and her lab and luckily she agreed. I will write more about it in the future.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/now/</guid>
+      <description>&lt;p&gt;&lt;em&gt;What is a now page?&lt;/em&gt; Read more about them &lt;a href=&#34;https://nownownow.com/about&#34;&gt;here&lt;/a&gt;. Most of the examples of &lt;em&gt;now&lt;/em&gt; pages that I saw has the recent updates with not much history, but I plan to keep appending updates. Maybe, if I keep updating, I will have a snapshot of life moments to look back on years down the line.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;Update: November 15, 2025&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;These days I have been working on the benchmarking infrastructure of sktime. We want it to reach a maturity stage where any one can easily reproduce an existing benchmarking experiment and I believe we&amp;rsquo;re quite close to our goal. This is in continuity to my project from European Summer of Code.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Endless Pursuit of a Personal Website</title>
+      <link>http://localhost:1313/the-endless-pursuit-of-a-personal-website/</link>
+      <pubDate>Sat, 15 Nov 2025 18:34:28 +0530</pubDate>
+      <guid>http://localhost:1313/the-endless-pursuit-of-a-personal-website/</guid>
+      <description>&lt;p&gt;Final, Final_1, Final_2, Final_3, &amp;hellip;, Final_N. I hope this website comes at the Nth position in the series.&lt;/p&gt;&#xA;&lt;p&gt;Ever since I started to understand how internet works, I wanted to have my personal website. You may ask why? And I have no particular answers, perhaps I just wanted to put myself out there?&lt;/p&gt;&#xA;&lt;p&gt;When I was in middle school and I did not know how to code websites, I used to use tools like Wordpress and PortfolioBox. They always left me dissatisfied because of how clunky and bloated they felt. But using them made me form my own philosophy around website designs - I ended up knowing what I don&amp;rsquo;t like and it is very important to know what you don&amp;rsquo;t like!&lt;/p&gt;</description>
     </item>
     <item>
       <title>But What Is European Summer of Code?</title>
-      <link>https://jgyasu.github.io/but-what-is-european-summer-of-code/</link>
+      <link>http://localhost:1313/but-what-is-european-summer-of-code/</link>
       <pubDate>Sun, 25 May 2025 08:34:28 +0530</pubDate>
-      <guid>https://jgyasu.github.io/but-what-is-european-summer-of-code/</guid>
+      <guid>http://localhost:1313/but-what-is-european-summer-of-code/</guid>
       <description>&lt;p&gt;If you&amp;rsquo;re reading this, you probably already have an idea of how rewarding it is to contribute to impactful open-source projects. There are several programs like GSoC, LFX Mentorship, SoB, and etcetera, which provides new contributors with opportunities to work on exciting open-source projects and learn a lot all while getting a good stipend.&lt;/p&gt;&#xA;&lt;p&gt;ESoC or the European Summer of Code is one such relatively new program, the description from their website reads,&lt;/p&gt;</description>
     </item>
   </channel>
