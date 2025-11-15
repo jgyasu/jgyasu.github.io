@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-05-25T08:34:28+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2025-05-25T08:34:28+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/contact/</loc>
+  </url><url>
+    <loc>http://localhost:1313/now/</loc>
+  </url><url>
+    <loc>http://localhost:1313/but-what-is-european-summer-of-code/</loc>
+    <lastmod>2025-05-25T08:34:28+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/esoc/</loc>
+    <lastmod>2025-05-25T08:34:28+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/open-source/</loc>
+    <lastmod>2025-05-25T08:34:28+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/software-engineering/</loc>
+    <lastmod>2025-05-25T08:34:28+05:30</lastmod>
+  </url>
+</urlset>
