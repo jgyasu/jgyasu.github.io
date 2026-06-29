@@ -86,105 +86,91 @@ const indexUrl = withBase("/search.json");
   }
 </style>
 
-<script is:inline define:vars={{ indexUrl }}>
-  (function () {
-    function initSearch() {
-      var root = document.querySelector(".search");
-      var input = document.getElementById("search-input");
-      var results = document.getElementById("search-results");
-      var status = document.getElementById("search-status");
-      if (!root || !input || !results || !status) return;
+<script>
+  type Item = {
+    type: string;
+    title: string;
+    description: string;
+    tags: string[];
+    url: string;
+    body: string;
+  };
 
-      var url = root.getAttribute("data-index") || indexUrl;
-      var items = null;
-      var loading = false;
+  const root = document.querySelector<HTMLElement>(".search");
+  const input = document.getElementById("search-input") as HTMLInputElement | null;
+  const results = document.getElementById("search-results") as HTMLUListElement | null;
+  const status = document.getElementById("search-status");
 
-      function escapeHtml(s) {
-        return s.replace(/[&<>"']/g, function (c) {
-          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
-        });
+  if (root && input && results && status) {
+    const indexUrl = root.dataset.index || "/search.json";
+    let items: Item[] | null = null;
+    let loading = false;
+
+    async function ensureIndex() {
+      if (items || loading) return;
+      loading = true;
+      try {
+        const res = await fetch(indexUrl);
+        items = (await res.json()) as Item[];
+      } catch {
+        status!.textContent = "Search is unavailable.";
+      } finally {
+        loading = false;
       }
+    }
 
-      function score(item, q) {
-        var hay = (item.title + " " + item.tags.join(" ")).toLowerCase();
-        if (item.title.toLowerCase().indexOf(q) !== -1) return 3;
-        if (hay.indexOf(q) !== -1) return 2;
-        if ((item.description + " " + item.body).toLowerCase().indexOf(q) !== -1) return 1;
-        return 0;
-      }
-
-      function render(q) {
-        if (!items) return;
-        var query = q.trim().toLowerCase();
-        if (query.length < 2) {
-          results.hidden = true;
-          results.innerHTML = "";
-          status.textContent = "";
-          return;
-        }
-        var matches = items
-          .map(function (item) {
-            return { item: item, s: score(item, query) };
-          })
-          .filter(function (m) {
-            return m.s > 0;
-          })
-          .sort(function (a, b) {
-            return b.s - a.s;
-          })
-          .slice(0, 20);
-
-        status.textContent =
-          matches.length + " result" + (matches.length === 1 ? "" : "s");
-        results.hidden = matches.length === 0;
-        results.innerHTML = matches
-          .map(function (_ref) {
-            var item = _ref.item;
-            return (
-              "<li><a href=\"" +
-              item.url +
-              "\">" +
-              escapeHtml(item.title) +
-              '<span class="result-type">' +
-              item.type +
-              "</span>" +
-              (item.description
-                ? '<span class="result-desc">' + escapeHtml(item.description) + "</span>"
-                : "") +
-              "</a></li>"
-            );
-          })
-          .join("");
-      }
-
-      function ensureIndex() {
-        if (items || loading) return;
-        loading = true;
-        fetch(url)
-          .then(function (res) {
-            return res.json();
-          })
-          .then(function (data) {
-            items = data;
-          })
-          .catch(function () {
-            status.textContent = "Search is unavailable.";
-          })
-          .finally(function () {
-            loading = false;
-          });
-      }
-
-      input.addEventListener("focus", ensureIndex, { once: true });
-      input.addEventListener("input", function () {
-        render(input.value);
+    function escapeHtml(s: string) {
+      return s.replace(/[&<>"']/g, (c) => {
+        const map: Record<string, string> = {
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#39;",
+        };
+        return map[c];
       });
     }
 
-    if ("requestIdleCallback" in window) {
-      requestIdleCallback(initSearch);
-    } else {
-      setTimeout(initSearch, 1);
+    function score(item: Item, q: string): number {
+      const hay = (item.title + " " + item.tags.join(" ")).toLowerCase();
+      if (item.title.toLowerCase().includes(q)) return 3;
+      if (hay.includes(q)) return 2;
+      if ((item.description + " " + item.body).toLowerCase().includes(q)) return 1;
+      return 0;
     }
-  })();
+
+    function render(q: string) {
+      if (!items) return;
+      const query = q.trim().toLowerCase();
+      if (query.length < 2) {
+        results!.hidden = true;
+        results!.innerHTML = "";
+        status!.textContent = "";
+        return;
+      }
+      const matches = items
+        .map((item) => ({ item, s: score(item, query) }))
+        .filter((m) => m.s > 0)
+        .sort((a, b) => b.s - a.s)
+        .slice(0, 20);
+
+      status!.textContent = `${matches.length} result${matches.length === 1 ? "" : "s"}`;
+      results!.hidden = matches.length === 0;
+      results!.innerHTML = matches
+        .map(
+          ({ item }) => `
+          <li>
+            <a href="${item.url}">
+              ${escapeHtml(item.title)}<span class="result-type">${item.type}</span>
+              ${item.description ? `<span class="result-desc">${escapeHtml(item.description)}</span>` : ""}
+            </a>
+          </li>`,
+        )
+        .join("");
+    }
+
+    input.addEventListener("focus", ensureIndex, { once: true });
+    input.addEventListener("input", () => render(input.value));
+  }
 </script>

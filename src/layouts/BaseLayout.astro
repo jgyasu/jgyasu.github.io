@@ -50,28 +50,5 @@ const { wide = false, ...head } = Astro.props;
       <slot />
     </main>
     <Footer />
-    {/* Single inline script — no module bundle, deferred until after paint. */}
-    <script is:inline>
-      (function () {
-        function onReady(fn) {
-          if (document.readyState === "loading") {
-            document.addEventListener("DOMContentLoaded", fn, { once: true });
-          } else {
-            fn();
-          }
-        }
-        onReady(function () {
-          var toggle = document.getElementById("theme-toggle");
-          toggle?.addEventListener("click", function () {
-            var current = document.documentElement.getAttribute("data-theme");
-            var next = current === "dark" ? "light" : "dark";
-            document.documentElement.setAttribute("data-theme", next);
-            try {
-              localStorage.setItem("theme", next);
-            } catch (e) {}
-          });
-        });
-      })();
-    </script>
   </body>
 </html>
