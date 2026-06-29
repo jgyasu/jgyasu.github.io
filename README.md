@@ -1,6 +1,7 @@
 # Personal Website
 
-A minimalist, typography-first personal website built with [Astro](https://astro.build).
+A minimalist, typography-first personal website built with [Astro](https://astro.build). 
+You may use it and adapt it for your own use. Built with the help of Claude Opus 4.8.
 
 ## Quick start
 
