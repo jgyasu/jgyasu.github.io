@@ -71,47 +71,29 @@ const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
   }
 </style>
 
-<script is:inline>
-  (function () {
-    function initToc() {
-      var links = Array.from(document.querySelectorAll("[data-toc-link]"));
-      if (links.length === 0) return;
+<script>
+  // Highlight the TOC link of the section currently in view.
+  const links = Array.from(
+    document.querySelectorAll<HTMLAnchorElement>("[data-toc-link]"),
+  );
+  if (links.length > 0) {
+    const bySlug = new Map(links.map((l) => [l.dataset.tocLink, l]));
+    const headings = links
+      .map((l) => document.getElementById(l.dataset.tocLink!))
+      .filter((el): el is HTMLElement => el !== null);
 
-      var bySlug = new Map(
-        links.map(function (l) {
-          return [l.getAttribute("data-toc-link"), l];
-        }),
-      );
-      var headings = links
-        .map(function (l) {
-          return document.getElementById(l.getAttribute("data-toc-link"));
-        })
-        .filter(Boolean);
-
-      var observer = new IntersectionObserver(
-        function (entries) {
-          for (var i = 0; i < entries.length; i++) {
-            var entry = entries[i];
-            if (entry.isIntersecting) {
-              links.forEach(function (l) {
-                l.classList.remove("active");
-              });
-              bySlug.get(entry.target.id)?.classList.add("active");
-            }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            links.forEach((l) => l.classList.remove("active"));
+            bySlug.get(entry.target.id)?.classList.add("active");
           }
-        },
-        { rootMargin: "0px 0px -75% 0px", threshold: 1 },
-      );
+        }
+      },
+      { rootMargin: "0px 0px -75% 0px", threshold: 1 },
+    );
 
-      headings.forEach(function (h) {
-        observer.observe(h);
-      });
-    }
-
-    if ("requestIdleCallback" in window) {
-      requestIdleCallback(initToc);
-    } else {
-      setTimeout(initToc, 1);
-    }
-  })();
+    headings.forEach((h) => observer.observe(h));
+  }
 </script>

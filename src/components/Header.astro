@@ -47,7 +47,8 @@ function isActive(href: string): boolean {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: var(--bg);
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    backdrop-filter: saturate(140%) blur(8px);
   }
   .header-inner {
     display: flex;

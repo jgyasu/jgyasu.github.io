@@ -393,16 +393,18 @@ a.tag:hover {
   color: var(--text-muted);
 }
 
-/* Subtle entrance — transform only so LCP is not delayed by opacity: 0. */
+/* Subtle fade-in for primary content */
 @media (prefers-reduced-motion: no-preference) {
   .fade-in {
     animation: fade-in 400ms ease both;
   }
   @keyframes fade-in {
     from {
+      opacity: 0;
       transform: translateY(6px);
     }
     to {
+      opacity: 1;
       transform: translateY(0);
     }
   }

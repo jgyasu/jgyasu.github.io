@@ -30,14 +30,6 @@ export default defineConfig({
 
   integrations: [sitemap()],
 
-  // Inline CSS to remove a render-blocking network request (helps FCP/LCP).
-  build: {
-    format: "directory",
-    inlineStylesheets: "always",
-  },
-
-  compressHTML: true,
-
   markdown: {
     remarkPlugins: [remarkReadingTime],
     rehypePlugins: [
@@ -58,5 +50,10 @@ export default defineConfig({
       },
       wrap: true,
     },
+  },
+
+  // Cleaner URLs: /blog/my-post/ instead of /blog/my-post.html
+  build: {
+    format: "directory",
   },
 });
