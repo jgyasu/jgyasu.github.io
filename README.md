@@ -1,15 +1,6 @@
 # Personal Website
 
 A minimalist, typography-first personal website built with [Astro](https://astro.build).
-Dark mode by default, zero client-side JavaScript on most pages, and content
-written entirely in Markdown.
-
-- **Fast** — static HTML, no framework runtime, near-zero JS.
-- **Accessible** — semantic markup, skip links, visible focus, reduced-motion support.
-- **SEO-friendly** — canonical URLs, Open Graph, Twitter cards, sitemap, RSS + Atom.
-- **Easy to maintain** — add a Markdown file, done. One config file for everything personal.
-
----
 
 ## Quick start
 
@@ -23,11 +14,9 @@ npm run check    # type-check Astro + TypeScript
 
 Requires Node.js 18.20+ or 20.3+ (Node 20 recommended).
 
----
-
 ## First things to edit
 
-Almost everything personal lives in **one file**:
+Almost everything personal lives in one file:
 
 ```
 src/site.config.ts
@@ -39,8 +28,6 @@ there. Then:
 1. Set `site` in `astro.config.mjs` to your final URL (see comments in that file).
 2. Replace `public/favicon.svg` and `public/og-default.svg` with your own.
 3. Edit `src/pages/about.astro` with your story.
-
----
 
 ## Project structure
 
@@ -87,11 +74,10 @@ there. Then:
 └── .github/workflows/deploy.yml  # GitHub Pages deployment
 ```
 
----
 
 ## Adding content
 
-You never need to touch configuration to publish — just create a Markdown file
+You never need to touch configuration to publish, just create a Markdown file
 in the right folder.
 
 ### Add a blog post
@@ -116,21 +102,6 @@ Reading time, table of contents, tags, prev/next navigation, RSS/Atom entries,
 and the archive update automatically. The URL is derived from the filename
 (`my-post.md` → `/blog/my-post/`).
 
-### Add a thought
-
-Create `src/content/thoughts/2026-06-29-some-idea.md`:
-
-```markdown
----
-pubDate: 2026-06-29
-# title: "Optional title"
-tags: ["software"]
----
-
-A short note. Thoughts are sorted newest-first automatically and shown in full
-on the Thoughts page.
-```
-
 ### Add a project
 
 Create `src/content/projects/my-project.md`:
@@ -153,7 +124,6 @@ Optional longer description shown on the projects page.
 For screenshots, drop the image in `public/projects/` and reference it with a
 root-relative path like `/projects/my-project.png`.
 
----
 
 ## Theming
 
@@ -162,18 +132,17 @@ The colour system is driven by CSS custom properties in
 the choice is saved to `localStorage`. To change the default, set `defaultTheme`
 in `src/site.config.ts`.
 
----
 
 ## Deployment (GitHub Pages)
 
 Deployment is automated via GitHub Actions (`.github/workflows/deploy.yml`).
 Every push to `main` builds and publishes the site.
 
-This template is configured for a **root deployment**, which is the recommended
+This template is configured for a root deployment, which is the recommended
 setup for a personal site and keeps URLs clean (`yourname.dev/blog` rather than
 `username.github.io/repo/blog`).
 
-**One-time setup:**
+### One-time setup:
 
 1. Create a repository named `username.github.io` (a user/org site) and push
    this code to it. _Or_ use any repo plus a custom domain (see below).
@@ -192,8 +161,6 @@ setup for a personal site and keeps URLs clean (`yourname.dev/blog` rather than
 > `astro.config.mjs` and wrap internal links with `withBase()` from
 > `src/lib/paths.ts`.
 
----
-
 ## Performance & SEO checklist
 
 This site is built to score close to 100 on Lighthouse:
@@ -205,8 +172,6 @@ This site is built to score close to 100 on Lighthouse:
 - `sitemap-index.xml`, `robots.txt`, RSS (`/rss.xml`) and Atom (`/atom.xml`).
 - Per-page Open Graph and Twitter card metadata with canonical URLs.
 
----
-
 ## License
 
-Add your preferred license here (e.g. MIT for code, CC-BY for content).
+MIT
