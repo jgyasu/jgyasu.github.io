@@ -51,7 +51,7 @@ export const site = {
   lang: "en",
 
   /** Default theme when a visitor has no saved preference. */
-  defaultTheme: "light" as "dark" | "light",
+  defaultTheme: "dark" as "dark" | "light",
 } as const;
 
 /** Primary navigation, rendered in the header. */
