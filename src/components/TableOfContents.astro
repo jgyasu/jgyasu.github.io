@@ -1,0 +1,117 @@
+---
+/**
+ * Table of contents built from a Markdown file's headings (h2/h3).
+ * Headings come from Astro's `render()` output, so this adds no client JS for
+ * generation. A tiny script highlights the active section while scrolling.
+ */
+import type { MarkdownHeading } from "astro";
+
+interface Props {
+  headings: MarkdownHeading[];
+}
+
+const { headings } = Astro.props;
+// Only show h2 and h3 to keep the TOC shallow and readable.
+const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
+---
+
+{
+  toc.length > 0 && (
+    <nav class="toc" aria-label="Table of contents">
+      <p class="toc-title">On this page</p>
+      <ul class="toc-list">
+        {toc.map((h) => (
+          <li class:list={["toc-item", `depth-${h.depth}`]}>
+            <a href={`#${h.slug}`} data-toc-link={h.slug}>
+              {h.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}
+
+<style>
+  .toc {
+    font-size: 0.9rem;
+  }
+  .toc-title {
+    margin: 0 0 var(--space-2);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-faint);
+    font-weight: 600;
+  }
+  .toc-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-inline-start: 1px solid var(--border);
+  }
+  .toc-item a {
+    display: block;
+    padding: 0.25rem 0 0.25rem var(--space-4);
+    margin-inline-start: -1px;
+    border-inline-start: 1px solid transparent;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+  .toc-item.depth-3 a {
+    padding-inline-start: var(--space-8);
+  }
+  .toc-item a:hover {
+    color: var(--text);
+    text-decoration: none;
+  }
+  .toc-item a.active {
+    color: var(--accent);
+    border-inline-start-color: var(--accent);
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    function initToc() {
+      var links = Array.from(document.querySelectorAll("[data-toc-link]"));
+      if (links.length === 0) return;
+
+      var bySlug = new Map(
+        links.map(function (l) {
+          return [l.getAttribute("data-toc-link"), l];
+        }),
+      );
+      var headings = links
+        .map(function (l) {
+          return document.getElementById(l.getAttribute("data-toc-link"));
+        })
+        .filter(Boolean);
+
+      var observer = new IntersectionObserver(
+        function (entries) {
+          for (var i = 0; i < entries.length; i++) {
+            var entry = entries[i];
+            if (entry.isIntersecting) {
+              links.forEach(function (l) {
+                l.classList.remove("active");
+              });
+              bySlug.get(entry.target.id)?.classList.add("active");
+            }
+          }
+        },
+        { rootMargin: "0px 0px -75% 0px", threshold: 1 },
+      );
+
+      headings.forEach(function (h) {
+        observer.observe(h);
+      });
+    }
+
+    if ("requestIdleCallback" in window) {
+      requestIdleCallback(initToc);
+    } else {
+      setTimeout(initToc, 1);
+    }
+  })();
+</script>

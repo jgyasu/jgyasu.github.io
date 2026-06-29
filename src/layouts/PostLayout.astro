@@ -1,0 +1,150 @@
+---
+/**
+ * Layout for a single blog post: title, metadata, table of contents, prose
+ * content, tags, and previous/next navigation.
+ */
+import type { MarkdownHeading } from "astro";
+import type { BlogPost } from "@/lib/utils";
+import { tagToSlug } from "@/lib/utils";
+import BaseLayout from "./BaseLayout.astro";
+import FormattedDate from "@/components/FormattedDate.astro";
+import TableOfContents from "@/components/TableOfContents.astro";
+import PostNav from "@/components/PostNav.astro";
+
+interface Props {
+  post: BlogPost;
+  headings: MarkdownHeading[];
+  readingTime?: string;
+  prev?: BlogPost;
+  next?: BlogPost;
+}
+
+const { post, headings, readingTime, prev, next } = Astro.props;
+const { title, description, pubDate, updatedDate, tags } = post.data;
+const hasToc = headings.filter((h) => h.depth === 2 || h.depth === 3).length > 1;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="article"
+  publishedTime={pubDate}
+  modifiedTime={updatedDate}
+  wide={hasToc}
+>
+  <article class:list={["post fade-in", { "with-toc": hasToc }]}>
+    <header class="post-header">
+      <h1 class="post-title">{title}</h1>
+      <p class="post-meta meta">
+        <FormattedDate date={pubDate} />
+        {readingTime && <span aria-hidden="true"> · </span>}
+        {readingTime && <span>{readingTime}</span>}
+        {updatedDate && (
+          <span class="post-updated">
+            · Updated <FormattedDate date={updatedDate} />
+          </span>
+        )}
+      </p>
+      {tags.length > 0 && (
+        <ul class="tag-list post-tags">
+          {tags.map((tag) => (
+            <li><a class="tag" href={`/blog/tags/${tagToSlug(tag)}`}>{tag}</a></li>
+          ))}
+        </ul>
+      )}
+    </header>
+
+    {hasToc && (
+      <aside class="post-toc">
+        <div class="post-toc-inner">
+          <TableOfContents headings={headings} />
+        </div>
+      </aside>
+    )}
+
+    <div class="post-content prose">
+      <slot />
+    </div>
+
+    <footer class="post-footer">
+      <PostNav prev={prev} next={next} />
+      <p class="post-back">
+        <a href="/blog">← All posts</a>
+      </p>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .post {
+    max-width: var(--measure);
+    margin-inline: auto;
+  }
+  .post-header {
+    margin-bottom: var(--space-8);
+  }
+  .post-title {
+    margin-bottom: var(--space-3);
+  }
+  .post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    align-items: center;
+  }
+  .post-tags {
+    margin-top: var(--space-4);
+  }
+  .post-footer {
+    margin-top: var(--space-8);
+  }
+  .post-back {
+    margin-top: var(--space-8);
+  }
+
+  /* Two-column layout with a sticky TOC on wide screens. */
+  .post.with-toc {
+    max-width: 60rem;
+  }
+  @media (min-width: 64rem) {
+    .post.with-toc {
+      display: grid;
+      grid-template-columns: 1fr 15rem;
+      grid-template-areas:
+        "header  toc"
+        "content toc"
+        "footer  toc";
+      column-gap: var(--space-12);
+      align-items: start;
+    }
+    .post.with-toc .post-header {
+      grid-area: header;
+    }
+    .post.with-toc .post-content {
+      grid-area: content;
+      min-width: 0;
+      max-width: var(--measure);
+    }
+    .post.with-toc .post-footer {
+      grid-area: footer;
+      max-width: var(--measure);
+    }
+    .post.with-toc .post-toc {
+      grid-area: toc;
+    }
+    .post-toc-inner {
+      position: sticky;
+      top: 5rem;
+    }
+  }
+  /* On narrow screens, show the TOC inline above the content. */
+  @media (max-width: 63.99rem) {
+    .post-toc {
+      margin-bottom: var(--space-8);
+      padding: var(--space-4) var(--space-6);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-subtle);
+    }
+  }
+</style>

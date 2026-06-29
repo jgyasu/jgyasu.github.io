@@ -1,0 +1,150 @@
+---
+import { site, socialLinks, interests } from "@/site.config";
+import { getPosts } from "@/lib/utils";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import FormattedDate from "@/components/FormattedDate.astro";
+
+const posts = (await getPosts()).slice(0, 3);
+
+function isExternal(href: string): boolean {
+  return href.startsWith("http");
+}
+---
+
+<BaseLayout>
+  <div class="home fade-in">
+    <section class="intro">
+      <h1 class="intro-name">{site.name}</h1>
+
+      <p class="intro-body">
+        I'm an engineering undergraduate at
+        <a href="https://en.wikipedia.org/wiki/National_Institutes_of_Technology">National Institute of Technology Agartala</a>.
+        I work part-time with the <a href="https://gcos.ai/">German Center for Open Source AI</a> on sktime, where I am also a core developer.
+      </p>
+
+      <p class="intro-body">
+        My current technical interests sit at the intersection of
+        {" "}
+        {interests.map((interest, i) => (
+          <>
+            <span class="interest">{interest}</span>{
+              i < interests.length - 2
+                ? ", "
+                : i === interests.length - 2
+                  ? ", and "
+                  : "."
+            }
+          </>
+        ))}
+      </p>
+
+      <ul class="social-inline">
+        {socialLinks.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              rel={isExternal(link.href) ? "me noopener noreferrer" : undefined}
+              target={isExternal(link.href) ? "_blank" : undefined}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    {posts.length > 0 && (
+      <section class="latest">
+        <div class="latest-head">
+          <h2>Latest writing</h2>
+          <a class="latest-more" href="/blog">All posts →</a>
+        </div>
+        <ul class="latest-list">
+          {posts.map((post) => (
+            <li class="latest-item">
+              <a href={`/blog/${post.id}`} class="latest-link">{post.data.title}</a>
+              <FormattedDate date={post.data.pubDate} />
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </div>
+</BaseLayout>
+
+<style>
+  .intro {
+    margin-block: var(--space-8) var(--space-12);
+  }
+  .intro-name {
+    margin-bottom: var(--space-2);
+  }
+  .intro-tagline {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin: 0 0 var(--space-6);
+  }
+  .intro-body {
+    font-size: 1.08rem;
+  }
+  .interest {
+    color: var(--text);
+    font-weight: 500;
+  }
+  .social-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-6);
+  }
+
+  .latest {
+    margin-block: var(--space-12);
+  }
+  .latest-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-4);
+  }
+  .latest-head h2 {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+  .latest-more {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+  .latest-more:hover {
+    color: var(--text);
+  }
+  .latest-list {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-4);
+  }
+  .latest-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-2);
+    padding-block: var(--space-3);
+    border-bottom: 1px solid var(--border);
+  }
+  .latest-link {
+    color: var(--text);
+    font-weight: 450;
+  }
+  .latest-link:hover {
+    color: var(--accent);
+  }
+  .latest-item :global(time) {
+    color: var(--text-faint);
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+</style>

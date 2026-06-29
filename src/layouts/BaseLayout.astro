@@ -1,0 +1,77 @@
+---
+/**
+ * BaseLayout wraps every page: it sets up <head> metadata, the no-flash theme
+ * script, global styles, header, footer, and the main content slot.
+ */
+import { site } from "@/site.config";
+import BaseHead from "@/components/BaseHead.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import "@/styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: "website" | "article";
+  publishedTime?: Date;
+  modifiedTime?: Date;
+  /** Use the wider container (for grids/listings). */
+  wide?: boolean;
+}
+
+const { wide = false, ...head } = Astro.props;
+---
+
+<!doctype html>
+<html lang={site.lang} data-theme={site.defaultTheme}>
+  <head>
+    <BaseHead {...head} />
+    {/* Apply the saved/system theme before paint to prevent a flash. */}
+    <script is:inline define:vars={{ fallback: site.defaultTheme }}>
+      (function () {
+        try {
+          const saved = localStorage.getItem("theme");
+          const system = window.matchMedia("(prefers-color-scheme: light)").matches
+            ? "light"
+            : "dark";
+          const theme = saved || system || fallback;
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", fallback);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <Header />
+    <main id="main" class:list={["container", { "container-wide": wide }]}>
+      <slot />
+    </main>
+    <Footer />
+    {/* Single inline script — no module bundle, deferred until after paint. */}
+    <script is:inline>
+      (function () {
+        function onReady(fn) {
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", fn, { once: true });
+          } else {
+            fn();
+          }
+        }
+        onReady(function () {
+          var toggle = document.getElementById("theme-toggle");
+          toggle?.addEventListener("click", function () {
+            var current = document.documentElement.getAttribute("data-theme");
+            var next = current === "dark" ? "light" : "dark";
+            document.documentElement.setAttribute("data-theme", next);
+            try {
+              localStorage.setItem("theme", next);
+            } catch (e) {}
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

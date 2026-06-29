@@ -1,0 +1,49 @@
+---
+import { getTagCounts, tagToSlug } from "@/lib/utils";
+import PageLayout from "@/layouts/PageLayout.astro";
+
+const tagCounts = await getTagCounts();
+// Sort by frequency, then alphabetically.
+const tags = [...tagCounts.entries()].sort(
+  (a, b) => b[1] - a[1] || a[0].localeCompare(b[0]),
+);
+---
+
+<PageLayout
+  title="Tags"
+  description="Browse blog posts by topic."
+  lede="Browse writing by topic."
+>
+  {tags.length === 0 ? (
+    <p class="muted">No tags yet.</p>
+  ) : (
+    <ul class="tag-cloud">
+      {tags.map(([tag, count]) => (
+        <li>
+          <a class="tag" href={`/blog/tags/${tagToSlug(tag)}`}>
+            {tag} <span class="tag-count">{count}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  )}
+</PageLayout>
+
+<style>
+  .tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-4);
+  }
+  .tag-cloud .tag {
+    font-size: 0.95rem;
+    padding: 0.3em 0.9em;
+  }
+  .tag-count {
+    color: var(--text-faint);
+    margin-inline-start: 0.2em;
+  }
+</style>

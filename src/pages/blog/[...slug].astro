@@ -1,0 +1,35 @@
+---
+import type { GetStaticPaths } from "astro";
+import { render } from "astro:content";
+import { getPosts } from "@/lib/utils";
+import PostLayout from "@/layouts/PostLayout.astro";
+
+// One page per blog post. `prev`/`next` are computed from the sorted list so
+// post navigation needs zero manual wiring.
+export const getStaticPaths = (async () => {
+  const posts = await getPosts();
+  return posts.map((post, index) => ({
+    params: { slug: post.id },
+    props: {
+      post,
+      // posts are newest-first; "next" = newer, "prev" = older.
+      next: index > 0 ? posts[index - 1] : undefined,
+      prev: index < posts.length - 1 ? posts[index + 1] : undefined,
+    },
+  }));
+}) satisfies GetStaticPaths;
+
+const { post, prev, next } = Astro.props;
+const { Content, headings, remarkPluginFrontmatter } = await render(post);
+const readingTime = remarkPluginFrontmatter.readingTime as string | undefined;
+---
+
+<PostLayout
+  post={post}
+  headings={headings}
+  readingTime={readingTime}
+  prev={prev}
+  next={next}
+>
+  <Content />
+</PostLayout>

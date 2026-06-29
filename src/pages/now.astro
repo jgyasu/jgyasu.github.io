@@ -1,0 +1,42 @@
+---
+import { getEntry, render } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import FormattedDate from "@/components/FormattedDate.astro";
+
+const entry = await getEntry("now", "now");
+if (!entry) throw new Error('Missing src/content/now/now.md — create it to publish the Now page.');
+
+const { Content } = await render(entry);
+const { updatedDate } = entry.data;
+---
+
+<BaseLayout
+  title="Now"
+  description="What I'm focused on right now."
+  modifiedTime={updatedDate}
+>
+  <div class="page fade-in">
+    <header class="page-header">
+      <h1>Now</h1>
+      <p class="page-updated meta">
+        Last updated <FormattedDate date={updatedDate} />
+      </p>
+    </header>
+    <div class="prose now-body">
+      <Content />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    margin-bottom: var(--space-8);
+  }
+  .page-updated {
+    margin: var(--space-2) 0 0;
+  }
+  .now-body:empty,
+  .now-body :global(p:only-child:empty) {
+    display: none;
+  }
+</style>

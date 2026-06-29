@@ -1,0 +1,84 @@
+---
+/** Previous / next navigation shown at the bottom of a blog post. */
+import type { BlogPost } from "@/lib/utils";
+
+interface Props {
+  prev?: BlogPost;
+  next?: BlogPost;
+}
+
+const { prev, next } = Astro.props;
+---
+
+{
+  (prev || next) && (
+    <nav class="post-nav" aria-label="Post navigation">
+      <div class="post-nav-cell">
+        {prev && (
+          <a href={`/blog/${prev.id}`} class="post-nav-link" rel="prev">
+            <span class="post-nav-dir">← Previous</span>
+            <span class="post-nav-title">{prev.data.title}</span>
+          </a>
+        )}
+      </div>
+      <div class="post-nav-cell align-end">
+        {next && (
+          <a href={`/blog/${next.id}`} class="post-nav-link align-end" rel="next">
+            <span class="post-nav-dir">Next →</span>
+            <span class="post-nav-title">{next.data.title}</span>
+          </a>
+        )}
+      </div>
+    </nav>
+  )
+}
+
+<style>
+  .post-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+    margin-top: var(--space-12);
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--border);
+  }
+  .post-nav-cell.align-end {
+    text-align: end;
+  }
+  .post-nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    transition: border-color var(--transition), background-color var(--transition);
+  }
+  .post-nav-link.align-end {
+    align-items: flex-end;
+    text-align: end;
+  }
+  .post-nav-link:hover {
+    border-color: var(--text-faint);
+    background: var(--bg-subtle);
+    text-decoration: none;
+  }
+  .post-nav-dir {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+  .post-nav-title {
+    font-weight: 550;
+  }
+  @media (max-width: 38rem) {
+    .post-nav {
+      grid-template-columns: 1fr;
+    }
+    .post-nav-cell.align-end,
+    .post-nav-link.align-end {
+      text-align: start;
+      align-items: flex-start;
+    }
+  }
+</style>

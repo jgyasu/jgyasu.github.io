@@ -1,0 +1,33 @@
+---
+import { getPosts } from "@/lib/utils";
+import PageLayout from "@/layouts/PageLayout.astro";
+import PostCard from "@/components/PostCard.astro";
+import Search from "@/components/Search.astro";
+
+const posts = await getPosts();
+---
+
+<PageLayout
+  title="Blog"
+  description="Essays and notes on life, and life interests."
+  lede=""
+>
+  <Search placeholder="Search posts…" />
+
+  {posts.length === 0 ? (
+    <p class="muted">No posts yet — check back soon.</p>
+  ) : (
+    <div class="post-list">
+      {posts.map((post) => <PostCard post={post} />)}
+    </div>
+  )}
+</PageLayout>
+
+<style>
+  .post-list {
+    margin-top: var(--space-4);
+  }
+  .post-list :global(.post-card:first-child) {
+    border-top: 1px solid var(--border);
+  }
+</style>

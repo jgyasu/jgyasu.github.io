@@ -1,0 +1,110 @@
+---
+import { site, navLinks } from "@/site.config";
+import ThemeToggle from "./ThemeToggle.astro";
+
+// Normalise the current path (strip the base path and trailing slash) so we can
+// highlight the active nav item regardless of deployment base.
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+let current = Astro.url.pathname.replace(/\/$/, "");
+if (base && current.startsWith(base)) current = current.slice(base.length) || "/";
+if (current === "") current = "/";
+
+function isActive(href: string): boolean {
+  if (href === "/") return current === "/";
+  return current === href || current.startsWith(href + "/");
+}
+---
+
+<header class="site-header">
+  <div class="container container-wide header-inner">
+    <a href="/" class="brand" aria-label={`${site.name} — home`}>{site.name}</a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav-list">
+        {
+          navLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class:list={["nav-link", { active: isActive(link.href) }]}
+                aria-current={isActive(link.href) ? "page" : undefined}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <ThemeToggle />
+  </div>
+</header>
+
+<style>
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--bg);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    min-height: 3.75rem;
+    padding-block: var(--space-2);
+  }
+  .brand {
+    font-weight: 650;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    font-size: 1.05rem;
+    flex-shrink: 0;
+  }
+  .brand:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .nav {
+    margin-inline-start: auto;
+  }
+  .nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--space-1);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-link {
+    display: inline-block;
+    padding: var(--space-2) var(--space-3);
+    color: var(--text-muted);
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    transition: color var(--transition), background-color var(--transition);
+  }
+  .nav-link:hover {
+    color: var(--text);
+    background: var(--bg-subtle);
+    text-decoration: none;
+  }
+  .nav-link.active {
+    color: var(--text);
+    font-weight: 550;
+  }
+
+  @media (max-width: 38rem) {
+    .header-inner {
+      gap: var(--space-2);
+    }
+    .nav-link {
+      padding: var(--space-2);
+      font-size: 0.9rem;
+    }
+  }
+</style>

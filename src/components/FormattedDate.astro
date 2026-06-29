@@ -1,0 +1,12 @@
+---
+/** Renders a semantic <time> element with a human-friendly label. */
+import { formatDate, isoDate } from "@/lib/utils";
+
+interface Props {
+  date: Date;
+}
+
+const { date } = Astro.props;
+---
+
+<time datetime={isoDate(date)}>{formatDate(date)}</time>

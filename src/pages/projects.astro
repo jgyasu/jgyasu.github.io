@@ -1,0 +1,31 @@
+---
+import { getProjects } from "@/lib/utils";
+import PageLayout from "@/layouts/PageLayout.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+
+const projects = await getProjects();
+---
+
+<PageLayout
+  title="Projects"
+  description="A selection of things I've built."
+  lede=""
+  wide={true}
+>
+  {projects.length === 0 ? (
+    <p class="muted">No projects yet.</p>
+  ) : (
+    <div class="project-grid">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  )}
+</PageLayout>
+
+<style>
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+    gap: var(--space-6);
+    margin-top: var(--space-4);
+  }
+</style>
