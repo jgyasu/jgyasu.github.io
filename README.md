@@ -1,7 +1,9 @@
-# Personal Website
+# Source Code for My Personal Website
 
 A minimalist, typography-first personal website built with [Astro](https://astro.build). 
-You may use it and adapt it for your own use. Built with the help of Claude Opus 4.8.
+You may use it and adapt it for your own use as per MIT license.
+
+Built with the help of Claude Opus 4.8.
 
 ## Quick start
 
