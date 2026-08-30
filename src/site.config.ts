@@ -71,6 +71,6 @@ export const socialLinks: SocialLink[] = [
 /** Short interest keywords shown on the home page. */
 export const interests: string[] = [
   "Machine Learning",
-  "DevOps",
+  "Infrastructure",
   "Open Source",
 ];
