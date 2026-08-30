@@ -5,7 +5,9 @@ pubDate: 2025-05-25
 tags: ["open-source", "software", "esoc"]
 ---
 
-If you're reading this, you probably already have an idea of how rewarding it is to contribute to impactful open-source projects. There are several programs like GSoC, LFX Mentorship, SoB, and etcetera, which provides new contributors with opportunities to work on exciting open-source projects and learn a lot all while getting a good stipend.
+If you're reading this, you probably already have an idea of how rewarding it is to contribute to impactful open-source projects. Don't know what open-source software is? Read about them [here](https://www.ibm.com/think/topics/open-source). 
+
+There are several programs like GSoC, LFX Mentorship, SoB, and etcetera, which provides new contributors with opportunities to work on exciting open-source projects and learn a lot all while getting a good stipend.
 
 ESoC or the European Summer of Code is one such relatively new program which awards a 4800 Euro stipend to the contributors while giving the opportunity to work with experienced mentors, the description from their website reads,
 
