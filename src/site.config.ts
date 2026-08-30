@@ -27,7 +27,7 @@ export const site = {
 
   /** Default meta description used when a page does not provide its own. */
   description:
-    "Personal website of Jigyasu - writing about open source, AI, machine learning, time series, mathematics, and building useful software.",
+    "Personal website of Jigyasu.",
 
   /**
    * Public URL of the deployed site. Keep this in sync with `site` in
@@ -42,7 +42,8 @@ export const site = {
   },
 
   /** Default Open Graph / Twitter image (relative to /public). */
-  ogImage: "/og-default.svg",
+  // ogImage: "/og-default.svg",
+  ogImage: "",
 
   /** Twitter / X handle (without the @), used for Twitter cards. */
   twitterHandle: "yourhandle",
