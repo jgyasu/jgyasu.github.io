@@ -26,8 +26,10 @@ function isActive(href: string): boolean {
             <li>
               <a
                 href={link.href}
-                class:list={["nav-link", { active: isActive(link.href) }]}
-                aria-current={isActive(link.href) ? "page" : undefined}
+                class:list={["nav-link", { active: !link.external && isActive(link.href) }]}
+                aria-current={!link.external && isActive(link.href) ? "page" : undefined}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
               >
                 {link.label}
               </a>
@@ -97,6 +99,15 @@ function isActive(href: string): boolean {
   .nav-link.active {
     color: var(--text);
     font-weight: 550;
+  }
+  .nav-link[target="_blank"]::after {
+    content: "↗";
+    display: inline-block;
+    margin-inline-start: 0.2em;
+    font-size: 0.7em;
+    font-weight: 400;
+    line-height: 1;
+    vertical-align: 0.2em;
   }
 
   @media (max-width: 38rem) {

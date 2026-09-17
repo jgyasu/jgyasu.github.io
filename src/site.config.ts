@@ -15,6 +15,8 @@ export interface SocialLink {
 export interface NavLink {
   label: string;
   href: string;
+  /** Open the link in a new browser tab. */
+  external?: boolean;
 }
 
 export const site = {
@@ -59,7 +61,11 @@ export const site = {
 export const navLinks: NavLink[] = [
   { label: "Blog", href: "/blog" },
   { label: "Now", href: "/now" },
-  { label: "Projects", href: "/projects" },
+  {
+    label: "Resume",
+    href: "/resume/jigyasu_resume_wo_phone_number.pdf",
+    external: true,
+  },
 ];
 
 /** Social links, rendered in the footer and on the home page. */
